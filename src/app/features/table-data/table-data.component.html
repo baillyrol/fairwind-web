@@ -1,0 +1,35 @@
+<h1>Eolienne XXX</h1>
+
+<div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.date | date:'medium'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="power">
+            <th mat-header-cell *matHeaderCellDef> Power </th>
+            <td mat-cell *matCellDef="let element"> {{element.power}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="energy">
+            <th mat-header-cell *matHeaderCellDef> Energy </th>
+            <td mat-cell *matCellDef="let element"> {{element.energy}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="rotation">
+            <th mat-header-cell *matHeaderCellDef> Rotation </th>
+            <td mat-cell *matCellDef="let element"> {{element.rotation}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="voltage">
+            <th mat-header-cell *matHeaderCellDef> Voltage </th>
+            <td mat-cell *matCellDef="let element"> {{element.voltage}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
