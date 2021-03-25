@@ -1,17 +1,32 @@
-<p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()" class="example-icon"
+            aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
     </button>
     <span>Fairwind</span>
     <span class="example-spacer"></span>
     <button mat-icon-button routerLink="/home" aria-label="Example icon-button with heart icon">
-      <mat-icon>home</mat-icon>
+        <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
+        <mat-icon>person</mat-icon>
     </button>
-  </mat-toolbar>
-</p>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer mode="side" opened>
+        <mat-list>
+            <mat-list-item>
+                <button mat-button routerLink="/dashboard">
+                    <mat-icon color="primary">dashboard</mat-icon>
+                    Dashboard
+                </button>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+
