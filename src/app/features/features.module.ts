@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TableDataComponent } from './table-data/table-data.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
+import { BarChartComponent } from './bar-chart/bar-chart.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
         HomeComponent,
         TableDataComponent,
         DashboardComponent,
-        LineChartComponent
+        LineChartComponent,
+        BarChartComponent
     ],
     imports: [
         CommonModule,

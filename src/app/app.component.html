@@ -6,7 +6,13 @@
     <span>Fairwind</span>
     <span class="example-spacer"></span>
     <button mat-icon-button routerLink="/home" aria-label="Example icon-button with heart icon">
+        <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/notifications" aria-label="Example icon-button with heart icon">
         <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>settings</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
         <mat-icon>person</mat-icon>
@@ -20,6 +26,24 @@
                 <button mat-button routerLink="/dashboard">
                     <mat-icon color="primary">dashboard</mat-icon>
                     Dashboard
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/table-data">
+                    <mat-icon color="primary">table_chart</mat-icon>
+                    Tableau de données
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/line-chart">
+                    <mat-icon color="primary">show_chart</mat-icon>
+                    Graphique en ligne
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">person</mat-icon>
+                    Utilisateur
                 </button>
             </mat-list-item>
         </mat-list>

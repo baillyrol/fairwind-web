@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<div class="container-fluid">
+    <h1>Dashboard</h1>
+    <div class="row">
+        <div class="col-6">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <app-line-chart canvasId="canvas"></app-line-chart>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <mat-card class="example-card">
+                <mat-card-content>
+                    <app-line-chart canvasId="id2"></app-line-chart>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <app-table-data></app-table-data>
+    </div>
+</div>
+

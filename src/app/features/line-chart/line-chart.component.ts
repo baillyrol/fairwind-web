@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -6,15 +6,18 @@ import { Chart } from 'chart.js';
     templateUrl: './line-chart.component.html',
     styleUrls: ['./line-chart.component.scss']
 })
-export class LineChartComponent implements OnInit {
+export class LineChartComponent implements AfterViewInit {
+
+    @Input()// @ts-ignore
+    canvasId = 'canvas';
 
     chart: any = [];
 
     constructor() {
     }
 
-    ngOnInit(): void {
-        this.chart = new Chart('canvas', {
+    ngAfterViewInit(): void {
+        this.chart = new Chart(this.canvasId, {
             type: 'line',
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],

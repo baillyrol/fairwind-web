@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -21,6 +22,7 @@ import { MatListModule } from '@angular/material/list';
         MatBadgeModule,
         MatSidenavModule,
         MatListModule,
+        MatCardModule,
     ],
     exports: [
         MatToolbarModule,
@@ -29,7 +31,8 @@ import { MatListModule } from '@angular/material/list';
         MatTableModule,
         MatBadgeModule,
         MatSidenavModule,
-        MatListModule
+        MatListModule,
+        MatCardModule
     ]
 })
 export class SharedModule {
