@@ -50,8 +50,7 @@ export class LineChartComponent implements AfterViewInit {
                         refresh: 2000,
                         delay: 2000,
                         onRefresh: (chart: any) => {
-                            // @ts-ignore
-                            chart.config.data.datasets.forEach(dataset => {
+                            chart.config.data.datasets.forEach((dataset: any) => {
                                 dataset.data.push({
                                     x: Date.now(),
                                     y: (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 50)
