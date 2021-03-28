@@ -8,6 +8,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { ChartsModule } from 'ng2-charts';
+
 
 
 
@@ -23,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
         MatSidenavModule,
         MatListModule,
         MatCardModule,
+        ChartsModule,
     ],
     exports: [
         MatToolbarModule,
@@ -32,7 +35,8 @@ import { MatCardModule } from '@angular/material/card';
         MatBadgeModule,
         MatSidenavModule,
         MatListModule,
-        MatCardModule
+        MatCardModule,
+        ChartsModule
     ]
 })
 export class SharedModule {
