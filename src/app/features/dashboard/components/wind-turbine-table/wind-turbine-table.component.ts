@@ -29,8 +29,8 @@ export class WindTurbineTableComponent implements OnInit {
     }, 1000);
   }
 
-  navigateToTableData(): void {
-    this.router.navigate(['/table-data']);
+  navigateToTableData(page: string): void {
+    this.router.navigate(['/' + page]);
   }
 
 }

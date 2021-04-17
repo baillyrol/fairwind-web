@@ -9,6 +9,7 @@ import { LiveChartComponent } from './live-chart/live-chart.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { WindTurbineDetailsComponent } from './wind-turbine-details/wind-turbine-details.component';
 import { GaugeChartComponent } from './gauge-chart/gauge-chart.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { GaugeChartComponent } from './gauge-chart/gauge-chart.component';
         CommonModule,
         SharedModule,
         DashboardModule,
+        AppRoutingModule,
     ]
 })
 export class FeaturesModule {

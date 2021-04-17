@@ -1,33 +1,36 @@
-<div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
+<div class="container-fluid">
+    <h1 class="mt-2">Tableau de données</h1>
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" matSort>
+            <!-- Position Column -->
+            <ng-container matColumnDef="date">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef>Date </th>
+                <td mat-cell *matCellDef="let element"> {{element.date | date:'medium'}} </td>
+            </ng-container>
 
-        <!-- Position Column -->
-        <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef>Date </th>
-            <td mat-cell *matCellDef="let element"> {{element.date | date:'medium'}} </td>
-        </ng-container>
+            <ng-container matColumnDef="power">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Puissance </th>
+                <td mat-cell *matCellDef="let element"> {{element.power}} </td>
+            </ng-container>
 
-        <ng-container matColumnDef="power">
-            <th mat-header-cell *matHeaderCellDef> Puissance </th>
-            <td mat-cell *matCellDef="let element"> {{element.power}} </td>
-        </ng-container>
+            <ng-container matColumnDef="energy">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Energie </th>
+                <td mat-cell *matCellDef="let element"> {{element.energy}} </td>
+            </ng-container>
 
-        <ng-container matColumnDef="energy">
-            <th mat-header-cell *matHeaderCellDef> Energie </th>
-            <td mat-cell *matCellDef="let element"> {{element.energy}} </td>
-        </ng-container>
+            <ng-container matColumnDef="rotation">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Rotation </th>
+                <td mat-cell *matCellDef="let element"> {{element.rotation}} </td>
+            </ng-container>
 
-        <ng-container matColumnDef="rotation">
-            <th mat-header-cell *matHeaderCellDef> Rotation </th>
-            <td mat-cell *matCellDef="let element"> {{element.rotation}} </td>
-        </ng-container>
+            <ng-container matColumnDef="voltage">
+                <th mat-header-cell mat-sort-header *matHeaderCellDef> Tension </th>
+                <td mat-cell *matCellDef="let element"> {{element.voltage}} </td>
+            </ng-container>
 
-        <ng-container matColumnDef="voltage">
-            <th mat-header-cell *matHeaderCellDef> Tension </th>
-            <td mat-cell *matCellDef="let element"> {{element.voltage}} </td>
-        </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
 </div>

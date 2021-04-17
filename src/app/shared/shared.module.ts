@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -27,6 +28,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
         MatCardModule,
         ChartsModule,
         HighchartsChartModule,
+        MatSortModule,
     ],
     exports: [
         MatToolbarModule,
@@ -39,6 +41,7 @@ import { HighchartsChartModule } from 'highcharts-angular';
         MatCardModule,
         ChartsModule,
         HighchartsChartModule,
+        MatSortModule
     ]
 })
 export class SharedModule {

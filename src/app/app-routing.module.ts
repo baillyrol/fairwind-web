@@ -6,7 +6,7 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { WindTurbineDetailsComponent } from './features/wind-turbine-details/wind-turbine-details.component';
 
 const routes: Routes = [
-    { path: 'home', component: WindTurbineDetailsComponent },
+    { path: 'detail', component: WindTurbineDetailsComponent },
     { path: 'table-data', component: TableDataComponent },
     { path: 'line-chart', component: LineChartComponent },
     { path: 'dashboard', component: DashboardComponent },
