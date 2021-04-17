@@ -16,8 +16,7 @@ export class GaugeChartComponent implements OnInit {
 
   Highcharts: typeof Highcharts = Highcharts;
   chartOptions!: Highcharts.Options;
-  // @ts-ignore
-  chart: Chart;
+  chart!: Chart;
 
   constructor() {
   }
@@ -103,7 +102,6 @@ export class GaugeChartComponent implements OnInit {
           color: '#DF5353' // red
         }]
       },
-      // @ts-ignore
       series: [{
         name: this.option.title,
         // @ts-ignore

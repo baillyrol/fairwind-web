@@ -2,7 +2,7 @@
     <h1 class="mt-4">Eolienne</h1>
     <div class="row">
         <div class="col-3">
-            <mat-card>
+            <mat-card style="height: 100%">
                 <span><b>Numéro de série:</b></span><br>
                 <span><b>Modele:</b> F100-10</span><br>
                 <span><b>Client:</b> C2B</span><br>
@@ -13,8 +13,58 @@
 
             </mat-card>
         </div>
+        <div class="col-3">
+            <mat-card style="height: 100%">
+                <div class="row">
+                    <div class="col-6">
+                        <button mat-raised-button color="basic">Graphe en ligne</button>
+                    </div>
+                    <div class="col-6">
+                        <button mat-raised-button color="basic">Tableau d'archives</button>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <h3>Energie produite: 9860,2 kWh</h3>
+                    <h3>Emission de CO2 économisé: 0 kg de CO2</h3>
+                </div>
+            </mat-card>
+        </div>
     </div>
     <div class="row mt-4">
+        <div class="col-4">
+            <mat-card style="height: 100%">
+                <h2>Composants électriques</h2>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Control Unit</th>
+                        <th scope="col">Active Line Module</th>
+                        <th scope="col">Motor module</th>
+                        <th scope="col">TM31</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="dot"></span></td>
+                        <td><span class="dot"></span></td>
+                        <td><span class="dot"></span></td>
+                        <td><span class="dot"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h2>Code défaut</h2>
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td><button mat-flat-button disabled>0</button></td>
+                        <td><button mat-flat-button disabled>0</button></td>
+                        <td><button mat-flat-button disabled>0</button></td>
+                        <td><button mat-flat-button disabled>0</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </mat-card>
+        </div>
         <div class="col-xl-2">
             <mat-card>
                 <fairwind-gauge-chart [option]="MOTOR"></fairwind-gauge-chart>
@@ -27,7 +77,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-2">
         <div class="col-xl-2">
             <mat-card>
                 <fairwind-gauge-chart [option]="ROTATION"></fairwind-gauge-chart>
