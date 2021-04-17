@@ -1,3 +1,12 @@
 table {
   width: 100%;
 }
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: lawngreen;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 2px;
+}

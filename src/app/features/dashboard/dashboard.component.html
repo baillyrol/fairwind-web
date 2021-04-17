@@ -1,82 +1,38 @@
 <div class="container-fluid">
-    <h1>Fairwind dashboard</h1>
-
+    <h1 class="mt-3">Fairwind dashboard</h1>
     <div class="row">
-        <div class="col-6">
+        <div class="col-xl-6">
             <fairwind-wind-turbine-table></fairwind-wind-turbine-table>
         </div>
-        <div class="col-6">
-            <div class="row ">
-                <div class="row ">
-                    <div class="col-6">
-                        <button mat-raised-button color="basic">Moyenne 10</button>
-                    </div>
-                    <div class="col-6">
-                        <button mat-raised-button color="basic">Arret Machine</button>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-6">
-                        <button mat-raised-button color="basic">Index Journalier</button>
-                    </div>
-                    <div class="col-6">
-                        <button mat-raised-button color="basic">Adresses IP</button>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col-6">
-                        <button mat-raised-button color="basic">Map</button>
-                    </div>
-                    <div class="col-6">
-                        <button mat-icon-button class="example-icon"
-                                aria-label="Example icon-button with share icon">
-                            <mat-icon>settings</mat-icon>
-                        </button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <mat-card>
-                            Puissance Instantannée du Parc Fairwind<br>
-                            3.3 kW
-                        </mat-card>
-                    </div>
-                    <div class="col-6">
-                        <mat-card>
-                            Puissance Instantannée du Parc Fairwind<br>
-                            3.3 kW
-                        </mat-card>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6">
-                        <mat-card>
-                            Nombre de machines en fonctionnement<br>
-                            2 /46 (4%)
-                        </mat-card>
-                    </div>
-                    <div class="col-6">
-                        <mat-card>
-                            Production historique du parc Fairwind<br>
-                            1725751 kWh
-                        </mat-card>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <mat-card>
-                            CO2 Economisé<br>
-                            776,59 T
-                        </mat-card>
-                    </div>
-
+        <div class="col-xl-6">
+            <div class="row">
+                <div class="col">
+                    <mat-card>
+                        <h2>Parc Fairwind</h2>
+                        <h4>Puissance Instantannée: 3.3 kW</h4>
+                        <h4> Nombre de machines en fonctionnement: 2 /46 (4%)</h4>
+                        <h4>Production historique: 1725751 kWh</h4>
+                        <h4>CO2 Economisé: 776,59 T</h4>
+                    </mat-card>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <fairwind-map></fairwind-map>
             </div>
-            <div class="row">
-                Parc machine
+            <div class="row mt-3">
+                <div class="col">
+                    <mat-card>
+                        <h2>Parc Machine</h2>
+                        F64-10: 9 machines [90 kW]<br>
+                        F64-10: 9 machines [210 kW]<br>
+                        F64-10: 9 machines [10 kW]<br>
+                        F64-10: 9 machines [550 kW]<br>
+                        F64-10: 9 machines [200 kW]<br>
+                        <hr style="width:50%;text-align:left;margin-left:0">
+                        Total: 46 MACHINES [1060 kW]
+                    </mat-card>
+                </div>
+
             </div>
         </div>
     </div>

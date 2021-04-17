@@ -1,22 +1,25 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button (click)="drawer.toggle()" class="example-icon"
-            aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>Fairwind</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button routerLink="/home" aria-label="Example icon-button with heart icon">
-        <mat-icon>home</mat-icon>
-    </button>
-    <button mat-icon-button routerLink="/notifications" aria-label="Example icon-button with heart icon">
-        <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>settings</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>person</mat-icon>
-    </button>
+    <mat-toolbar-row>
+
+        <button mat-icon-button (click)="drawer.toggle()" class="example-icon"
+                aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Fairwind</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button routerLink="/home" aria-label="Example icon-button with heart icon">
+            <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button routerLink="/notifications" aria-label="Example icon-button with heart icon">
+            <mat-icon matBadge="3" matBadgeColor="warn">notifications</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+            <mat-icon>person</mat-icon>
+        </button>
+    </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-drawer-container style="height: 100%">
@@ -44,6 +47,42 @@
                 <button mat-button routerLink="/user">
                     <mat-icon color="primary">person</mat-icon>
                     Utilisateur
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">map</mat-icon>
+                    map
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">person</mat-icon>
+                    Moyenne 10
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">person</mat-icon>
+                    Index Journalier
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">person</mat-icon>
+                    Arret Machine
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">person</mat-icon>
+                    Adresses IP
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/user">
+                    <mat-icon color="primary">settings</mat-icon>
+                    Paramètres
                 </button>
             </mat-list-item>
         </mat-list>

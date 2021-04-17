@@ -9,7 +9,7 @@ import { ELEMENT_DATA } from '../../model/wind-turbine';
 })
 export class WindTurbineTableComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'rotation', 'vent', 'puissance', 'action'];
+  displayedColumns: string[] = ['name', 'leds', 'rotation', 'vent', 'puissance', 'action'];
   dataSource = ELEMENT_DATA;
 
   rotation = 0;
@@ -22,9 +22,9 @@ export class WindTurbineTableComponent implements OnInit {
 
   ngOnInit(): void {
     setInterval(() => {
-      this.rotation = Math.floor(Math.random() * (10 + 1)) + 10;
-      this.vent = Math.floor(Math.random() * (10 + 1)) + 10;
-      this.puissance = Math.floor(Math.random() * (10 + 1)) + 10;
+      this.rotation = Math.floor(Math.random() * (10 + 1)) + 20;
+      this.vent = Math.floor(Math.random() * (10 + 1)) + 20;
+      this.puissance = Math.floor(Math.random() * (10 + 1)) + 20;
 
     }, 1000);
   }
