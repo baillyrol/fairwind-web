@@ -3,13 +3,12 @@ import { Chart } from 'chart.js';
 import 'chartjs-plugin-streaming';
 
 
-
 @Component({
-    selector: 'app-line-chart',
-    templateUrl: './line-chart.component.html',
-    styleUrls: ['./line-chart.component.scss']
+    selector: 'fairwind-global-line-chart',
+    templateUrl: './global-line-chart.component.html',
+    styleUrls: ['./global-line-chart.component.scss']
 })
-export class LineChartComponent implements AfterViewInit {
+export class GlobalLineChartComponent implements AfterViewInit {
 
     @Input()// @ts-ignore
     canvasId = 'canvas';
@@ -28,14 +27,32 @@ export class LineChartComponent implements AfterViewInit {
     config = {
         type: 'line',
         data: {
-            datasets: [{
-                label: 'Dataset 1 (linear interpolation)',
-                backgroundColor: this.color(this.chartColors.red).alpha(0.5).rgbString(),
-                borderColor: this.chartColors.blue,
-                fill: false,
-                cubicInterpolationMode: 'monotone',
-                data: []
-            }]
+            datasets: [
+                {
+                    label: 'Consigne vitesse [RPM]',
+                    backgroundColor: this.color(this.chartColors.blue).alpha(0.5).rgbString(),
+                    borderColor: this.chartColors.blue,
+                    fill: false,
+                    cubicInterpolationMode: 'monotone',
+                    data: []
+                },
+                {
+                    label: 'Vitesse de rotation [RPM]',
+                    backgroundColor: this.color(this.chartColors.red).alpha(0.5).rgbString(),
+                    borderColor: this.chartColors.red,
+                    fill: false,
+                    cubicInterpolationMode: 'monotone',
+                    data: []
+                },
+                {
+                    label: 'Couple [RPM]',
+                    backgroundColor: this.color(this.chartColors.green).alpha(0.5).rgbString(),
+                    borderColor: this.chartColors.green,
+                    fill: false,
+                    cubicInterpolationMode: 'monotone',
+                    data: []
+                }
+            ]
         },
         options: {
             title: {
