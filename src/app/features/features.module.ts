@@ -7,6 +7,8 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LiveChartComponent } from './live-chart/live-chart.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { WindTurbineDetailsComponent } from './wind-turbine-details/wind-turbine-details.component';
+import { GaugeChartComponent } from './gauge-chart/gauge-chart.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
         LineChartComponent,
         BarChartComponent,
         LiveChartComponent,
+        WindTurbineDetailsComponent,
+        GaugeChartComponent,
     ],
     imports: [
         CommonModule,

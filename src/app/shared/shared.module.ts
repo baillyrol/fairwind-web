@@ -9,7 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
-
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 
@@ -26,6 +26,7 @@ import { ChartsModule } from 'ng2-charts';
         MatListModule,
         MatCardModule,
         ChartsModule,
+        HighchartsChartModule,
     ],
     exports: [
         MatToolbarModule,
@@ -36,7 +37,8 @@ import { ChartsModule } from 'ng2-charts';
         MatSidenavModule,
         MatListModule,
         MatCardModule,
-        ChartsModule
+        ChartsModule,
+        HighchartsChartModule,
     ]
 })
 export class SharedModule {
