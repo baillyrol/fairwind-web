@@ -3,24 +3,24 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
 import { TableDataComponent } from './table-data/table-data.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { LiveChartComponent } from './live-chart/live-chart.component';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
     declarations: [
         HomeComponent,
         TableDataComponent,
-        DashboardComponent,
         LineChartComponent,
         BarChartComponent,
-        LiveChartComponent
+        LiveChartComponent,
     ],
     imports: [
         CommonModule,
-        SharedModule
+        SharedModule,
+        DashboardModule,
     ]
 })
 export class FeaturesModule {
