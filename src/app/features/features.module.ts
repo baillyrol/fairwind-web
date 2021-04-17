@@ -6,6 +6,7 @@ import { TableDataComponent } from './table-data/table-data.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
+import { LiveChartComponent } from './live-chart/live-chart.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
         TableDataComponent,
         DashboardComponent,
         LineChartComponent,
-        BarChartComponent
+        BarChartComponent,
+        LiveChartComponent
     ],
     imports: [
         CommonModule,

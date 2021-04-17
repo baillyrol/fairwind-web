@@ -1,0 +1,110 @@
+{
+  "/api/esco": {
+    "target": "https://ec.europa.eu",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api/esco": "/esco/api"
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/eprofile": {
+    "target": "http://localhost:8763",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/eprofile": "/eprofile/"
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/document-repository": {
+    "target": "http://localhost:8181",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "--UNCOMMENT-IF-YOU-WANT-TO-PREVIEW-IMAGES-LOCALLY-/api/document-repository/documents/": {
+    "target": "http://localhost:8080",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/document-repository/documents/": ""
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/my-library": {
+    "target": "http://localhost:8182",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/office": {
+    "target": "http://localhost:8383",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/office/static": {
+    "target": "http://localhost:8383",
+    "secure": false
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON--/api/codifications": {
+    "target": "http://localhost:8282",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/recommender": {
+    "target": "http://localhost:8952",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "--KEEP-COMMENTED-IF-YOU-WANT-TO-USE-DB.JSON__/api/esco-provider": {
+    "target": "http://localhost:8777",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+
+  "/---/api/user-details": {
+    "target": "http://localhost:8762",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  },
+  "/---/api/logout": {
+    "target": "http://localhost:8762",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  },
+  "/---/api/europass-auth": {
+    "target": "http://localhost:8762",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": "/"
+    }
+  },
+  "/---/api/learning-opportunities": {
+    "target": "http://localhost:8765",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/---/api/job-opportunities": {
+    "target": "http://localhost:8764",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/api": {
+    "target": "http://localhost:3000",
+    "secure": false
+  }
+}
