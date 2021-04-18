@@ -10,6 +10,7 @@ import { GaugeChartComponent } from './gauge-chart/gauge-chart.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { GlobalLineChartComponent } from './global-line-chart/global-line-chart.component';
 import { BarChartModule } from './bar-chart/bar-chart.module';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { BarChartModule } from './bar-chart/bar-chart.module';
         LiveChartComponent,
         WindTurbineDetailsComponent,
         GaugeChartComponent,
+        MapComponent,
     ],
     imports: [
         CommonModule,
