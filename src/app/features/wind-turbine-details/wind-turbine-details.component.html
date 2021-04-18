@@ -2,7 +2,7 @@
     <h1 class="mt-4">Eolienne</h1>
     <div class="row">
         <div class="col-3">
-            <mat-card style="height: 100%">
+            <mat-card>
                 <span><b>Numéro de série:</b></span><br>
                 <span><b>Modele:</b> F100-10</span><br>
                 <span><b>Client:</b> C2B</span><br>
@@ -14,19 +14,24 @@
             </mat-card>
         </div>
         <div class="col-3">
-            <mat-card style="height: 100%">
+            <mat-card>
                 <div class="row">
                     <div class="col-6">
-                        <button mat-raised-button routerLink="/line-chart" color="basic">Graphe en ligne</button>
+                        <button mat-raised-button routerLink="/line-chart" color="primary">Graphe en ligne</button>
                     </div>
                     <div class="col-6">
-                        <button mat-raised-button routerLink="/table-data" color="basic">Tableau d'archives</button>
+                        <button mat-raised-button routerLink="/table-data" color="primary">Tableau d'archives</button>
                     </div>
                 </div>
                 <div class="row mt-4">
                     <h3>Energie produite: 9860,2 kWh</h3>
                     <h3>Emission de CO2 économisé: 0 kg de CO2</h3>
                 </div>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <mat-card>
+                <fairwind-bar-chart></fairwind-bar-chart>
             </mat-card>
         </div>
     </div>

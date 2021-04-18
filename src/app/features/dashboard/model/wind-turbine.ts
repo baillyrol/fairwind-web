@@ -18,4 +18,15 @@ export const ELEMENT_DATA: WindTurbine[] = [
     { id: 12, name: 'Turbine 12' },
     { id: 13, name: 'Turbine 13' },
     { id: 14, name: 'Turbine 14' },
+    { id: 15, name: 'Turbine 15' },
+    { id: 16, name: 'Turbine 16' },
+    { id: 17, name: 'Turbine 17' },
+    { id: 18, name: 'Turbine 18' },
+    { id: 19, name: 'Turbine 19' },
+    { id: 20, name: 'Turbine 20' },
+    { id: 21, name: 'Turbine 21' },
+    { id: 22, name: 'Turbine 22' },
+    { id: 23, name: 'Turbine 23' },
+    { id: 24, name: 'Turbine 24' },
+
 ];
