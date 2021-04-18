@@ -1,6 +1,5 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-
         <button mat-icon-button (click)="drawer.toggle()" class="example-icon"
                 aria-label="Example icon-button with menu icon">
             <mat-icon>menu</mat-icon>
@@ -22,13 +21,19 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-drawer-container style="height: 100%">
+<mat-drawer-container>
     <mat-drawer #drawer mode="side" opened>
         <mat-list>
             <mat-list-item>
                 <button mat-button routerLink="/dashboard">
                     <mat-icon color="primary">dashboard</mat-icon>
                     Dashboard
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/detail">
+                    <mat-icon color="primary">details</mat-icon>
+                    Détail
                 </button>
             </mat-list-item>
             <mat-list-item>
@@ -44,27 +49,27 @@
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button routerLink="/user">
-                    <mat-icon color="primary">person</mat-icon>
-                    Utilisateur
-                </button>
-            </mat-list-item>
-            <mat-list-item>
                 <button mat-button routerLink="/map">
                     <mat-icon color="primary">map</mat-icon>
                     Map
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button routerLink="/user">
+                <button mat-button routerLink="/average10">
                     <mat-icon color="primary">table_chart</mat-icon>
                     Moyenne 10
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button routerLink="/user">
-                    <mat-icon color="primary">person</mat-icon>
-                    Index Journalier
+                <button mat-button routerLink="/report">
+                    <mat-icon color="primary">wallpaper</mat-icon>
+                    Rapport
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-button routerLink="/address-ip">
+                    <mat-icon color="primary">table_chart</mat-icon>
+                    Adresses IP
                 </button>
             </mat-list-item>
             <mat-list-item>
@@ -75,12 +80,12 @@
             </mat-list-item>
             <mat-list-item>
                 <button mat-button routerLink="/user">
-                    <mat-icon color="primary">table_chart</mat-icon>
-                    Adresses IP
+                    <mat-icon color="primary">person</mat-icon>
+                    Utilisateur
                 </button>
             </mat-list-item>
             <mat-list-item>
-                <button mat-button routerLink="/user">
+                <button mat-button routerLink="/settings">
                     <mat-icon color="primary">settings</mat-icon>
                     Paramètres
                 </button>
@@ -88,7 +93,9 @@
         </mat-list>
     </mat-drawer>
     <mat-drawer-content>
-        <router-outlet></router-outlet>
+        <div class="container-fluid" style="min-height: 800px;">
+            <router-outlet></router-outlet>
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>
 

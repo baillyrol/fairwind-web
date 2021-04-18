@@ -1,7 +1,7 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name</th>
-        <td mat-cell style="max-width: 60px" *matCellDef="let element">
+        <td mat-cell style="width: 17%" *matCellDef="let element">
             <button mat-raised-button routerLink="/detail" color="basic">{{element.name}}</button>
         </td>
     </ng-container>

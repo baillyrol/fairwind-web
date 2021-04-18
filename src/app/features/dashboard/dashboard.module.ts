@@ -10,6 +10,9 @@ import { BarChartModule } from '../bar-chart/bar-chart.module';
 
 @NgModule({
     declarations: [DashboardComponent, WindTurbineTableComponent, MapComponent],
+    exports: [
+        WindTurbineTableComponent
+    ],
     imports: [
         CommonModule,
         SharedModule,

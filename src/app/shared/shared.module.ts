@@ -11,6 +11,13 @@ import { MatCardModule } from '@angular/material/card';
 import { ChartsModule } from 'ng2-charts';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -29,6 +36,13 @@ import { MatSortModule } from '@angular/material/sort';
         ChartsModule,
         HighchartsChartModule,
         MatSortModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatSnackBarModule,
     ],
     exports: [
         MatToolbarModule,
@@ -41,7 +55,13 @@ import { MatSortModule } from '@angular/material/sort';
         MatCardModule,
         ChartsModule,
         HighchartsChartModule,
-        MatSortModule
+        MatSortModule,
+        MatSelectModule,
+        MatDatepickerModule,
+        MatTabsModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatSnackBarModule
     ]
 })
 export class SharedModule {

@@ -1,0 +1,62 @@
+<h1 class="mt-2"> Rapport</h1>
+<div class="row">
+    <div class="col-12 col-lg-2">
+        <mat-form-field appearance="fill">
+            <mat-label>Sélectionner éolienne</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let turbine of ELEMENT_DATA" [value]="turbine.name">
+                    {{turbine.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="col-12 col-lg-3">
+        <mat-form-field style="width: 300px" appearance="fill">
+            <mat-label>Date du début et de fin du rapport d'analyse:</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <highcharts-chart
+                [Highcharts]="Highcharts"
+                [options]="chartOptions"
+                [callbackFunction]="chartCallback"
+                style="width: 100%; height: 300px; display: block;">
+        </highcharts-chart>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-12 col-lg-6">
+        <mat-card>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Relevé de la production</th>
+                    <th scope="col">Vent mensuel moyen</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>5342 kWh</td>
+                    <td>4,64 m/s</td>
+                </tr>
+                </tbody>
+            </table>
+            <fairwind-gauge-chart [option]="IRM"></fairwind-gauge-chart>
+
+        </mat-card>
+    </div>
+    <div class="col-12 col-lg-6">
+        <mat-card>
+            <h2>Courbe de puissance</h2>
+                <fairwind-scatter-plot></fairwind-scatter-plot>
+        </mat-card>
+    </div>
+</div>

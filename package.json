@@ -8,7 +8,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server-only": "json-server --watch ./api/db.json",
-    "ng-only": "ng serve --proxy-config proxy.conf.json",
+    "ng-only": "ng serve --proxy-config proxy.conf.json --disable-host-check",
     "start": "concurrently \"npm run server-only\" \"npm run ng-only\""
   },
   "private": true,

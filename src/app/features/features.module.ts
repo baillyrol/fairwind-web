@@ -11,6 +11,12 @@ import { AppRoutingModule } from '../app-routing.module';
 import { GlobalLineChartComponent } from './global-line-chart/global-line-chart.component';
 import { BarChartModule } from './bar-chart/bar-chart.module';
 import { MapComponent } from './map/map.component';
+import { AddressIpComponent, DialogOverviewExampleDialog } from './address-ip/address-ip.component';
+import { Average10Component } from './average10/average10.component';
+import { ReportComponent } from './report/report.component';
+import { ScatterPlotComponent } from './scatter-plot/scatter-plot.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,13 +28,20 @@ import { MapComponent } from './map/map.component';
         WindTurbineDetailsComponent,
         GaugeChartComponent,
         MapComponent,
+        AddressIpComponent,
+        Average10Component,
+        ReportComponent,
+        ScatterPlotComponent,
+        DialogOverviewExampleDialog,
     ],
     imports: [
         CommonModule,
         SharedModule,
         DashboardModule,
         AppRoutingModule,
-        BarChartModule
+        BarChartModule,
+        MatInputModule,
+        FormsModule
     ]
 })
 export class FeaturesModule {

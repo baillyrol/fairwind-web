@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Ajouter éolienne</h1>
+<div mat-dialog-content>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Nom de l'éolienne</mat-label>
+            <input matInput [(ngModel)]="data.animal">
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Adresse IP</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field>
+            <mat-label>Numéro modèle</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Client</mat-label>
+            <mat-select>
+                <mat-option value="one">Client-1</mat-option>
+                <mat-option value="two">Client-2</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="fill">
+            <mat-label>Autre info</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button (click)="onNoClick()" [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>

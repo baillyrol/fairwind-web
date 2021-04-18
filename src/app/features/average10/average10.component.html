@@ -1,0 +1,16 @@
+<h1 class="mt-2">Moyenne 10</h1>
+<div class="row">
+    <div class="col-12">
+        <mat-form-field appearance="fill">
+            <mat-label>Sélectionner éolienne</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let turbine of ELEMENT_DATA" [value]="turbine.name">
+                    {{turbine.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>
+<div class="row">
+    <app-table-data></app-table-data>
+</div>

@@ -10,3 +10,10 @@ table {
   display: inline-block;
   margin: 2px;
 }
+.mat-row {
+  height: auto !important;
+}
+
+.mat-cell {
+  margin: 8px 8px 8px 0 !important;
+}
