@@ -21,8 +21,8 @@
     </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-drawer-container>
-    <mat-drawer #drawer mode="side" opened>
+<mat-drawer-container autosize>
+    <mat-drawer #drawer [autoFocus]="false" [mode]="isMobile ? 'over': 'side'" opened>
         <mat-list>
             <mat-list-item>
                 <button mat-button routerLink="/dashboard">
@@ -93,8 +93,8 @@
         </mat-list>
     </mat-drawer>
     <mat-drawer-content>
-        <div class="container-fluid" style="min-height: 800px;">
-            <router-outlet></router-outlet>
+        <div class="container-fluid">
+                <router-outlet></router-outlet>
         </div>
     </mat-drawer-content>
 </mat-drawer-container>

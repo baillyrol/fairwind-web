@@ -1,162 +1,157 @@
-<div class="container-fluid">
-    <h1 class="mt-4">Détail éolienne-1</h1>
+<h1 class="mt-4">Détail éolienne-1</h1>
 
-    <mat-tab-group>
-        <mat-tab label="Detail">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <mat-card>
-                        <span><b>Numéro de série:</b></span><br>
-                        <span><b>Modele:</b> F100-10</span><br>
-                        <span><b>Client:</b> C2B</span><br>
-                        <span><b>Site:</b> Avenue de spirou 32<br>
+<mat-tab-group>
+    <mat-tab label="Detail">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <mat-card>
+                    <span><b>Numéro de série:</b></span><br>
+                    <span><b>Modele:</b> F100-10</span><br>
+                    <span><b>Client:</b> C2B</span><br>
+                    <span><b>Site:</b> Avenue de spirou 32<br>
                     6220 Fleurus<br>
                     Belgique
                 </span>
 
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-                    <mat-card>
-                        <div class="row">
-                            <div class="col-12 col-sm-6">
-                                <button mat-raised-button routerLink="/line-chart" color="primary">Graphe en ligne
-                                </button>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <button mat-raised-button routerLink="/table-data" color="primary">Tableau d'archives
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <h3>Energie produite: 9860,2 kWh</h3>
-                            <h3>Emission de CO2 économisé: 0 kg de CO2</h3>
-                        </div>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                    <mat-card>
-                        <fairwind-bar-chart></fairwind-bar-chart>
-                    </mat-card>
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-12 col-md-6">
-                    <mat-card style="height: 100%">
-                        <h2>Composants électriques</h2>
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">Control Unit</th>
-                                <th scope="col">Active Line Module</th>
-                                <th scope="col">Motor module</th>
-                                <th scope="col">TM31</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                                <td><span class="dot"></span></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <h2>Code défaut</h2>
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <button mat-flat-button disabled>0</button>
-                                </td>
-                                <td>
-                                    <button mat-flat-button disabled>0</button>
-                                </td>
-                                <td>
-                                    <button mat-flat-button disabled>0</button>
-                                </td>
-                                <td>
-                                    <button mat-flat-button disabled>0</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-md-3">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="MOTOR"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-md-3">
-                    <mat-card style="height: 100%; width: 100%">
-                        <fairwind-gauge-chart [option]="BUS_DC"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-            </div>
-
-            <div class="row mt-2">
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="ROTATION"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="WIND"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="PUISSANCE"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="COUPLE"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="COURANT"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-sm-6 col-md-6 col-lg-2">
-                    <mat-card>
-                        <fairwind-gauge-chart [option]="TENSION_RESEAU"></fairwind-gauge-chart>
-                    </mat-card>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-12 col-lg-6">
-                    <mat-card>
-                        <fairwind-global-line-chart canvasId="id1"></fairwind-global-line-chart>
-                    </mat-card>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <mat-card>
-                        <fairwind-global-line-chart canvasId="id2"></fairwind-global-line-chart>
-                    </mat-card>
-                </div>
-            </div>
-        </mat-tab>
-        <mat-tab label="Tableau de données">
-            <app-table-data></app-table-data>
-        </mat-tab>
-        <mat-tab label="Graphe en ligne">
-            <div class="container-fluid">
-                <mat-card>
-                    <highcharts-chart
-                            [Highcharts]="Highcharts"
-                            [options]="chartOptions"
-                            [callbackFunction]="chartCallback"
-                            style="width: 100%; height: 100%; display: block;"
-                    ></highcharts-chart>
                 </mat-card>
             </div>
-        </mat-tab>
-    </mat-tab-group>
+            <div class="col-12 col-md-6 col-lg-3">
+                <mat-card>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <button mat-raised-button routerLink="/line-chart" color="primary">Graphe en ligne
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <button mat-raised-button routerLink="/table-data" color="primary">Tableau d'archives
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <h3>Energie produite: 9860,2 kWh</h3>
+                        <h3>Emission de CO2 économisé: 0 kg de CO2</h3>
+                    </div>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <mat-card>
+                    <fairwind-bar-chart></fairwind-bar-chart>
+                </mat-card>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-md-6">
+                <mat-card style="height: 100%">
+                    <h2>Composants électriques</h2>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Control Unit</th>
+                            <th scope="col">Active Line Module</th>
+                            <th scope="col">Motor module</th>
+                            <th scope="col">TM31</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span class="dot"></span></td>
+                            <td><span class="dot"></span></td>
+                            <td><span class="dot"></span></td>
+                            <td><span class="dot"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h2>Code défaut</h2>
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <button mat-flat-button disabled>0</button>
+                            </td>
+                            <td>
+                                <button mat-flat-button disabled>0</button>
+                            </td>
+                            <td>
+                                <button mat-flat-button disabled>0</button>
+                            </td>
+                            <td>
+                                <button mat-flat-button disabled>0</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </mat-card>
+            </div>
+            <div class="col-12 col-md-3">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="MOTOR"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-md-3">
+                <mat-card style="height: 100%; width: 100%">
+                    <fairwind-gauge-chart [option]="BUS_DC"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+        </div>
 
-
-</div>
-
+        <div class="row mt-2">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="ROTATION"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="WIND"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="PUISSANCE"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="COUPLE"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="COURANT"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <mat-card>
+                    <fairwind-gauge-chart [option]="TENSION_RESEAU"></fairwind-gauge-chart>
+                </mat-card>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12 col-lg-6">
+                <mat-card>
+                    <fairwind-global-line-chart canvasId="id1"></fairwind-global-line-chart>
+                </mat-card>
+            </div>
+            <div class="col-12 col-lg-6">
+                <mat-card>
+                    <fairwind-global-line-chart canvasId="id2"></fairwind-global-line-chart>
+                </mat-card>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Tableau de données">
+        <app-table-data></app-table-data>
+    </mat-tab>
+    <mat-tab label="Graphe en ligne">
+        <div class="container-fluid">
+            <mat-card>
+                <highcharts-chart
+                        [Highcharts]="Highcharts"
+                        [options]="chartOptions"
+                        [callbackFunction]="chartCallback"
+                        style="width: 100%; height: 100%; display: block;"
+                ></highcharts-chart>
+            </mat-card>
+        </div>
+    </mat-tab>
+</mat-tab-group>
