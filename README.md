@@ -21,3 +21,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Run with http server
 
 http-server -p 8080 -c-1 dist/fairwind-web
+
+
+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
