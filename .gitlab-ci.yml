@@ -1,19 +1,15 @@
 image: node:8.12.0
-
 pages:
   cache:
     paths:
       - node_modules/
-
-  stage: deploy
   script:
-    - npm install -g @angular/cli@6.2.1
+    - npm install -g @angular/cli@7.1.2
     - npm install
-    - ng build
-    - mv dist/fossilizer/* public/
+    - npm run buildProd
   artifacts:
     paths:
-      - public
+      - dist/fairwind-web
   only:
     - master
     - pages
